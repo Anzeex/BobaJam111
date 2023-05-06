@@ -40,30 +40,7 @@ public class GamemanagerScript : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         
-        if (scenenum ==2)
-        {
-            Dsystem = GameObject.FindObjectOfType<DialogueManager>();
-            if (abilityType != NPC.AbilityType.Empty)
-            {
-                switch (abilityType)
-                {
-                    case NPC.AbilityType.Sports:
-                        convoToParse = Sports[sportsLevel];
-                        break;
-                    case NPC.AbilityType.Gossip:
-                        convoToParse = Gossip[gossipLevel];
-                        break;
-                    case NPC.AbilityType.Humor:
-                        convoToParse = Humor[humorLevel];
-                        break;
-                    case NPC.AbilityType.Crush:
-                        convoToParse = Crush[crushLevel];
-                        break;
-               
-                }
-                Dsystem.StartDialogue(convoToParse);
-            }
-        }
+        
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -71,6 +48,35 @@ public class GamemanagerScript : MonoBehaviour
         if (instance != this)
         {
             Destroy(gameObject);
+
+        }
+        else
+        {
+            if (scenenum == 2)
+            {
+                print("done!");
+                Dsystem = GameObject.FindObjectOfType<DialogueManager>();
+                if (abilityType != NPC.AbilityType.Empty)
+                {
+                    switch (abilityType)
+                    {
+                        case NPC.AbilityType.Sports:
+                            convoToParse = Sports[sportsLevel];
+                            break;
+                        case NPC.AbilityType.Gossip:
+                            convoToParse = Gossip[gossipLevel];
+                            break;
+                        case NPC.AbilityType.Humor:
+                            convoToParse = Humor[humorLevel];
+                            break;
+                        case NPC.AbilityType.Crush:
+                            convoToParse = Crush[crushLevel];
+                            break;
+
+                    }
+                    StartCoroutine(Dsystem.StartDialogue(convoToParse));
+                }
+            }
         }
     }
 

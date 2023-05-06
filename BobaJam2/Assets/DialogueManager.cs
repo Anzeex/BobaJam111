@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
     // Start displaying the dialogue
     private int sentecneOn;
     public int currentSpeaker = 0;
-    public ConversationOBJ testconvo;
+    
     public ConversationOBJ Currentconvo;
     public GameObject[] choicecards;
     public GameObject[] choicecardsText;
@@ -136,6 +136,6 @@ public class DialogueManager : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(StartDialogue(testconvo));
+       
     }
 }

@@ -15,13 +15,13 @@ public class Player : MonoBehaviour
         switch (abilityType)
         {
             case NPC.AbilityType.Sports:
-                Gamemanager.sportsLevel++;
+                //Gamemanager.sportsLevel++;
                 break;
             case NPC.AbilityType.Gossip:
-                Gamemanager.gossipLevel++;
+                //Gamemanager.gossipLevel++;
                 break;
             case NPC.AbilityType.Humor:
-                Gamemanager.humorLevel++;
+                //Gamemanager.humorLevel++;
                 break;
         }
     }
