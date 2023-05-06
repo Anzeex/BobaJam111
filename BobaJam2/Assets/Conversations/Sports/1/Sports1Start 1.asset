@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Sports1Start 1
   m_EditorClassIdentifier: 
   Sentences:
-  - Hey, did you see our basketball team's game last night? They totally crushed
-    it!
-  - Oh, I think I missed that. What happened?
+  - Hey, did you see our basketball team's game last night???
+  - Oh, I think I missed that. What happened??
   - They were just super in sync, you know? Their passing and communication were
-    on point. Really made a difference.
+    on point.
   Speaekr: 010000000000000001000000
   speakerValue: 0
   ShouldConvoEnd: 0

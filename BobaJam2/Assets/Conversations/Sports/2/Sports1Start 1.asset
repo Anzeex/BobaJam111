@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
-  m_Name: Sports2
+  m_Name: Sports1Start 1
   m_EditorClassIdentifier: 
   Sentences:
-  - Hey, did you see our basketball team's game last night? They totally crushed
-    it!
-  - Oh, I think I missed that. What happened?
+  - Hey, did you see our basketball team's game last night???
+  - Oh, I think I missed that. What happened??
   - They were just super in sync, you know? Their passing and communication were
-    on point. Really made a difference.
+    on point.
   Speaekr: 010000000000000001000000
+  speakerValue: 0
   ShouldConvoEnd: 0
   ChoiceOptions:
   - {fileID: 11400000, guid: 5f127df90b90fd749a31cb645cb526b8, type: 2}
   - {fileID: 11400000, guid: 5bfd7729d706ed14685a796c00ed9a05, type: 2}
   ChoicesText:
-  - No she didnt!!!
-  - oh, cool!
+  - Yeah, teamwork is crucial in sports like basketball!!!
+  - Basketball? How many touchdowns did you score?
