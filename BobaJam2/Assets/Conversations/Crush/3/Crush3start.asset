@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: Crush3start
+  m_EditorClassIdentifier: 
+  Sentences:
+  - Honestly, Ive been so bored lately.
+  - How are you doing?
+  Speaekr: 0100000001000000
+  speakerValue: 3
+  ShouldConvoEnd: 0
+  ChoiceOptions:
+  - {fileID: 11400000, guid: 5763c356881941546971ab880b756f9a, type: 2}
+  - {fileID: 11400000, guid: ab27878097994124e838bfe6a528f55e, type: 2}
+  - {fileID: 11400000, guid: ddd30b7fbaea302408e2fd95a250e5d3, type: 2}
+  ChoicesText:
+  - Great, ez gains every day!!!
+  - Honestly same here.
+  - Whats with you, do you have no friends?
