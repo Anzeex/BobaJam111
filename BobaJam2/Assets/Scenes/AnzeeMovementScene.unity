@@ -349,7 +349,11 @@ MonoBehaviour:
   humorLevel: 0
   crushLevel: 0
   scenenum: 0
-  Sports: []
+  Sports:
+  - {fileID: 11400000, guid: 8ef599d5ad137434f8762beffd474657, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Gossip:
   - {fileID: 11400000, guid: 3cc056864e8eff94d93d98b89044e843, type: 2}
   - {fileID: 0}

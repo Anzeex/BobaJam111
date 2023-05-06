@@ -19,10 +19,11 @@ MonoBehaviour:
   - They were just super in sync, you know? Their passing and communication were
     on point. Really made a difference.
   Speaekr: 010000000000000001000000
+  speakerValue: 0
   ShouldConvoEnd: 0
   ChoiceOptions:
   - {fileID: 11400000, guid: 5f127df90b90fd749a31cb645cb526b8, type: 2}
   - {fileID: 11400000, guid: 5bfd7729d706ed14685a796c00ed9a05, type: 2}
   ChoicesText:
-  - No she didnt!!!
-  - oh, cool!
+  - Yeah, teamwork is crucial in sports like basketball!!!
+  - Basketball? How many touchdowns did you score?

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sport1Choice2
   m_EditorClassIdentifier: 
   ShouldkeepTalking: 1
-  NextConvo: {fileID: 11400000, guid: b849a9fddea9e124a8f467808a12ba15, type: 2}
+  NextConvo: {fileID: 11400000, guid: b7ec75af5da482a4299c2a8311cac0bd, type: 2}
   Abilitytype: 0
