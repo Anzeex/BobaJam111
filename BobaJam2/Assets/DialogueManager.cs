@@ -27,10 +27,12 @@ public class DialogueManager : MonoBehaviour
     public ConversationOBJ Currentconvo;
     public GameObject[] choicecards;
     public GameObject[] choicecardsText;
+    public Sprite[] speakersImages;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
         Currentconvo= conversationtoospeak;
+        //speakers[1].sprite = speakers
         // Stop any currently running typing coroutine
         if (typingCoroutine != null)
         {
@@ -57,6 +59,7 @@ public class DialogueManager : MonoBehaviour
         }
         if(!conversationtoospeak.ShouldConvoEnd)
         {
+            print((conversationtoospeak.ChoiceOptions.Length)+ "this is TerrainHeightmapSyncControl");
             DisplayChoices(conversationtoospeak.ChoiceOptions.Length);
         }
 
@@ -99,7 +102,7 @@ public class DialogueManager : MonoBehaviour
         {
             choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
             choicecards[0].SetActive(true);
-            choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
+            choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[1];
             choicecards[2].SetActive(true);
         }
         else
@@ -116,22 +119,51 @@ public class DialogueManager : MonoBehaviour
     }
     public void diolougeChooice(int choice)
     {
+        print(choice);
         for (int i = 0; i < 3; i++)
         {
             choicecards[i].SetActive(false);
         }
         //Currentconvo.ChoiceOptions[choice].effectt();
-        if (!Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
-
+        print(Currentconvo.ChoiceOptions.Length == 2);
+        if (Currentconvo.ChoiceOptions.Length == 2)
         {
-            StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+            print("here");
+            if (choice == 2)
+            {
+
+                print("im in choice arg");
+                if (Currentconvo.ChoiceOptions[1].ShouldkeepTalking)
+
+                {
+                    StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[1].NextConvo));
+                }
+
+            }
+            else
+            {
+                print("amlost");
+                if (Currentconvo.ChoiceOptions[0].ShouldkeepTalking)
+
+                {
+                    print("now");
+                    StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[0].NextConvo));
+                }
+            }
+
         }
         else
         {
-            //end convo
+            if (Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
+
+            {
+                print("now");
+                StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+            }
         }
+    }
         
-    } 
+    
      
     
     private void Start()
