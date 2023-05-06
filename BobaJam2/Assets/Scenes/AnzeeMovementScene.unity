@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AvaNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 5230162274872115293, guid: dc7d05ca44cbae8409e5f33ad85b0084, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6009612866464267225, guid: dc7d05ca44cbae8409e5f33ad85b0084, type: 3}
       propertyPath: npcName
       value: Ava
