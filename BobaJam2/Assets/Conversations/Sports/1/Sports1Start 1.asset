@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Sports1Start 1
   m_EditorClassIdentifier: 
   Sentences:
-  - Hey, did you see our basketball team's game last night???
+  - Hey, did you see our basketball game last night???
   - Oh, I think I missed that. What happened??
-  - They were just super in sync, you know? Their passing and communication were
-    on point.
+  - We were just super in sync, you know? Our passing and communication were on point.
   Speaekr: 010000000000000001000000
   speakerValue: 0
   ShouldConvoEnd: 0

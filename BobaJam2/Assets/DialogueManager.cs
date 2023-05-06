@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject[] choicecardsText;
     public Sprite[] speakersImages;
     public bool[] LevelChecks;
+    public AudioSource typeSound;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
@@ -88,6 +89,7 @@ public class DialogueManager : MonoBehaviour
         {
             // Add the current character to the dialogue text
             dialogueText.text += currentDialogue[i];
+            PlayTypingSound();
 
             // Wait for the specified typing speed
             yield return new WaitForSeconds(typingSpeed);
@@ -224,7 +226,10 @@ public class DialogueManager : MonoBehaviour
     }
         
     
-     
+    public void PlayTypingSound()
+    {
+        typeSound.Play();
+    }
     
     private void Start()
     {
