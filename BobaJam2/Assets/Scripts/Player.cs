@@ -31,6 +31,6 @@ public class Player : MonoBehaviour
     }
     public void Win() 
     {
-        Win();
+       //win
     }
 }

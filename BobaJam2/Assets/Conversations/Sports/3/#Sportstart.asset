@@ -15,7 +15,7 @@ MonoBehaviour:
   Sentences:
   - Think fast!!!
   - '[Ball speeds towards you]'
-  Speaekr: 01000000
+  Speaekr: 0100000001000000
   speakerValue: 0
   ShouldConvoEnd: 0
   ChoiceOptions:
