@@ -84,14 +84,15 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator TypeDialogue()
     {
         // Clear the dialogue text
-        dialogueText.text = "";
 
+        dialogueText.text = "";
+        PlayTypingSound();
         // Loop through each character in the dialogue
         for (int i = 0; i < currentDialogue.Length; i++)
         {
             // Add the current character to the dialogue text
             dialogueText.text += currentDialogue[i];
-            PlayTypingSound();
+            
 
             // Wait for the specified typing speed
             yield return new WaitForSeconds(typingSpeed);
