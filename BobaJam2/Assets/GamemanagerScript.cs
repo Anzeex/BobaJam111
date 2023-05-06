@@ -115,6 +115,8 @@ public class GamemanagerScript : MonoBehaviour
         }
     }
     public void ExitConvo(){
+        Debug.Log("ExitConvo called");
         SceneManager.LoadScene("AnzeeMovementScene", LoadSceneMode.Single);
+        Debug.Log("ExitConvo completed");
     }
 }
