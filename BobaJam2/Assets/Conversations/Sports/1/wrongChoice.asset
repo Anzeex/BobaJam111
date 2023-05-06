@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wrongChoice
   m_EditorClassIdentifier: 
   Sentences:
-  - fill this out
+  - Oh..... not that kind of Football.
   Speaekr: 01000000
   speakerValue: 0
   ShouldConvoEnd: 1
