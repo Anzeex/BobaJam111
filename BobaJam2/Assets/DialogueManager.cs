@@ -94,6 +94,7 @@ public class DialogueManager : MonoBehaviour
     // Wait until left mouse button is clicked
     public void DisplayChoices(int NumBofChoices)
     {
+        dialogueText.text = "";
         if (NumBofChoices == 2)
         {
             choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
