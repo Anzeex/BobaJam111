@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7104ea9fbb5665409b0288e7b5b787b, type: 3}
   m_Name: Crush1Badchoice2
   m_EditorClassIdentifier: 
-  ShouldkeepTalking: 0
-  NextConvo: {fileID: 0}
-  Abilitytype: 0
+  ShouldkeepTalking: 1
+  NextConvo: {fileID: 11400000, guid: 7991853aad9a7b840887c99bc97f44f6, type: 2}
+  Abilitytype: 4
