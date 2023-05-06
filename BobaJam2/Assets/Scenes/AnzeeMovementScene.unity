@@ -385,13 +385,14 @@ MonoBehaviour:
   - {fileID: 0}
   Gossip:
   - {fileID: 11400000, guid: 3cc056864e8eff94d93d98b89044e843, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b00c60471e2e4d44aba1df213e5a4200, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   Humor:
   - {fileID: 11400000, guid: 18a474cf24bf43f45874d5cbcf94f824, type: 2}
   Crush:
   - {fileID: 11400000, guid: e41436c26b7f9ed45b2493df71d0ee09, type: 2}
+  - {fileID: 11400000, guid: c0a1807db11f9544992106aa4f57c327, type: 2}
   convoToParse: {fileID: 0}
   Dsystem: {fileID: 0}
 --- !u!4 &484664723
