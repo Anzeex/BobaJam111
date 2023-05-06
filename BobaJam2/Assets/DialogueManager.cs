@@ -86,17 +86,22 @@ public class DialogueManager : MonoBehaviour
         // Clear the dialogue text
 
         dialogueText.text = "";
-        PlayTypingSound();
+      
         // Loop through each character in the dialogue
         for (int i = 0; i < currentDialogue.Length; i++)
         {
             // Add the current character to the dialogue text
             dialogueText.text += currentDialogue[i];
-            
+            if (!typeSound.isPlaying)
+            {
+                typeSound.clip = soundarray[Random.Range(0, soundarray.Length)];
+                typeSound.Play();
+            }
 
             // Wait for the specified typing speed
             yield return new WaitForSeconds(typingSpeed);
         }
+        typeSound.Stop();
         isTyping= false;   
         // Set the typing coroutine to null when finished
         typingCoroutine = null;
@@ -230,19 +235,7 @@ public class DialogueManager : MonoBehaviour
     }
         
     
-    public void PlayTypingSound()
-    {
-        isTyping= true;
-        while (isTyping)
-        {
-            if (!typeSound.isPlaying)
-            {
-                typeSound.clip = soundarray[Random.Range(0, soundarray.Length)];
-                typeSound.Play();
-            }
-                
-        }
-    }
+    
     
     private void Start()
     {
