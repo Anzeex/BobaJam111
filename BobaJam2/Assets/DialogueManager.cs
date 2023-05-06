@@ -36,12 +36,13 @@ public class DialogueManager : MonoBehaviour
     public ConversationOBJ notReadyDrama;
     public ConversationOBJ notReadySports;
     public ConversationOBJ notReadyHumor;
+    private bool tempbruh = true;
 
     public bool isTyping;
     private bool conversationIsOver = false;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
-        if (!CrushLevelCheck(conversationtoospeak))
+        if (!CrushLevelCheck(conversationtoospeak) && tempbruh)
         {
             if (conversationtoospeak.speakerValue == 0)
             {
@@ -58,8 +59,10 @@ public class DialogueManager : MonoBehaviour
                 //humor
                 StartCoroutine(StartDialogue(notReadyHumor));
             }
+            Debug.Log("yield break");
             yield break;
         }
+        tempbruh = true;
         sentecneOn = 0;
         Currentconvo = conversationtoospeak;
         speakers[0].sprite = speakersImages[conversationtoospeak.speakerValue];
@@ -282,6 +285,7 @@ public class DialogueManager : MonoBehaviour
     private bool CrushLevelCheck(ConversationOBJ c)
     {
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
+        Debug.Log("CRUSHLEVELCHECK TEST" + Gamemanager.sportsLevel);
         int currentSubjectLevel = 0;
         if (c.speakerValue == 0)
         {
@@ -304,13 +308,15 @@ public class DialogueManager : MonoBehaviour
             return true;
             //crush
         }
-        if (Gamemanager.crushLevel <= currentSubjectLevel)
+        if (Gamemanager.crushLevel < currentSubjectLevel)
         {
-            return true;
+            Debug.Log("crushlevel too low");
+            return false;
         }
         else
         {
-            return false;
+
+            return true;
         }
     }
 
