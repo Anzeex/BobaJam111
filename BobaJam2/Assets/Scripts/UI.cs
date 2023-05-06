@@ -8,7 +8,12 @@ public class UI : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject settingsPanel;
     public Animator animator;
-    public AnimationClip transitionAnimation;
+    public AnimationClip transitionAnimation,ani;
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(animator.gameObject);
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("AnzeeMovementScene");
@@ -41,5 +46,9 @@ public class UI : MonoBehaviour
 
         // Load the next scene
         SceneManager.LoadScene(nextSceneName);
+
+        animator.Play(ani.name);
+        yield return new WaitForSeconds(ani.length);
+        Destroy(gameObject);
     }
 }
