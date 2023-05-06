@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
     public ConversationOBJ notReadyDrama;
     public ConversationOBJ notReadySports;
     public ConversationOBJ notReadyHumor;
-
+    public AudioClip questionsound;
 
     public bool isTyping;
     private bool conversationIsOver = false;
@@ -122,6 +122,8 @@ public class DialogueManager : MonoBehaviour
     public void DisplayChoices(int NumBofChoices)
     {
         dialogueText.text = "";
+        typeSound.clip = questionsound;
+        typeSound.Play();
         if (NumBofChoices == 2)
         {
             choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
