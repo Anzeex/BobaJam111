@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     public Sprite[] speakersImages;
     public bool[] LevelChecks;
     public AudioSource typeSound;
+    public AudioClip[] soundarray;
+    public bool isTyping;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
@@ -94,7 +96,7 @@ public class DialogueManager : MonoBehaviour
             // Wait for the specified typing speed
             yield return new WaitForSeconds(typingSpeed);
         }
-
+        isTyping= false;   
         // Set the typing coroutine to null when finished
         typingCoroutine = null;
     }
@@ -229,7 +231,16 @@ public class DialogueManager : MonoBehaviour
     
     public void PlayTypingSound()
     {
-        typeSound.Play();
+        isTyping= true;
+        while (isTyping)
+        {
+            if (!typeSound.isPlaying)
+            {
+                typeSound.clip = soundarray[Random.Range(0, soundarray.Length)];
+                typeSound.Play();
+            }
+                
+        }
     }
     
     private void Start()
