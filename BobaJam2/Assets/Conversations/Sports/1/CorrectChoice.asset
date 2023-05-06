@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CorrectChoice
   m_EditorClassIdentifier: 
   Sentences:
-  - Totally dude, totally!!!
+  - hell yeah bro!!!!
   Speaekr: 01000000
   speakerValue: 0
   ShouldConvoEnd: 1

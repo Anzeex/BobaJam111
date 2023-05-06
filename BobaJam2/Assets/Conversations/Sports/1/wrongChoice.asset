@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wrongChoice
   m_EditorClassIdentifier: 
   Sentences:
-  - bro... what are you on about?
+  - fill this out
   Speaekr: 01000000
   speakerValue: 0
   ShouldConvoEnd: 1

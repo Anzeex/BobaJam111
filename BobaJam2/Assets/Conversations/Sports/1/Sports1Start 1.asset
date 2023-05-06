@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Sports1Start 1
   m_EditorClassIdentifier: 
   Sentences:
-  - Hey, did you see our basketball game last night???
-  - Oh, I think I missed that. What happened??
-  - We were just super in sync, you know? Our passing and communication were on point.
-  Speaekr: 010000000000000001000000
+  - Yo what are you doing this weekend?
+  - I have nothing planned...
+  - Me and boys are getting together to play some fotball.
+  - You in?
+  Speaekr: 01000000000000000100000001000000
   speakerValue: 0
   ShouldConvoEnd: 0
   ChoiceOptions:
   - {fileID: 11400000, guid: 5f127df90b90fd749a31cb645cb526b8, type: 2}
   - {fileID: 11400000, guid: 5bfd7729d706ed14685a796c00ed9a05, type: 2}
   ChoicesText:
-  - Yeah, teamwork is crucial in sports like basketball!!!
-  - Basketball? How many touchdowns did you score?
+  - Sure!! Sounds like a great time :)
+  - idk what to write here
