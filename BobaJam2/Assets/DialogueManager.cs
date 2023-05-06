@@ -1,6 +1,7 @@
 using Packages.Rider.Editor.UnitTesting;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,11 +24,13 @@ public class DialogueManager : MonoBehaviour
     // Start displaying the dialogue
     private int sentecneOn;
     public int currentSpeaker = 0;
-    
+    public GamemanagerScript Gamemanager;
     public ConversationOBJ Currentconvo;
+    public ConversationOBJ crushLevelFail;
     public GameObject[] choicecards;
     public GameObject[] choicecardsText;
     public Sprite[] speakersImages;
+    public bool[] LevelChecks;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
@@ -108,12 +111,53 @@ public class DialogueManager : MonoBehaviour
         else
         {
             //used to be for loop, chenged becuase no work, sorry, not sorry
-            choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
-            choicecards[0].SetActive(true);
-            choicecardsText[1].GetComponent<Text>().text = Currentconvo.ChoicesText[1];
-            choicecards[1].SetActive(true);
-            choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
-            choicecards[2].SetActive(true);
+            //check if speaker is crush
+            if(Currentconvo.speakerValue== 3)
+            {
+                if (Gamemanager.sportsLevel == (Gamemanager.crushLevel + 1))
+                {
+                    choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
+                    choicecards[0].SetActive(true);
+                    LevelChecks[0] = true;
+                }
+                else
+                {
+                    choicecardsText[0].GetComponent<Text>().text = "";
+                    choicecards[0].SetActive(true);
+                }
+                if (Gamemanager.gossipLevel == (Gamemanager.crushLevel + 1))
+                {
+                    choicecardsText[1].GetComponent<Text>().text = Currentconvo.ChoicesText[1];
+                    choicecards[1].SetActive(true);
+                    LevelChecks[1] = true;
+                }
+                else
+                {
+                    choicecardsText[1].GetComponent<Text>().text = "";
+                    choicecards[1].SetActive(true);
+                }
+                if (Gamemanager.humorLevel == (Gamemanager.crushLevel + 1))
+                {
+                    choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
+                    choicecards[2].SetActive(true);
+                    LevelChecks[2] = true;
+                }
+                else
+                {
+                    choicecardsText[2].GetComponent<Text>().text = "";
+                    choicecards[2].SetActive(true);
+                }
+            }
+            else
+            {
+                choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
+                choicecards[0].SetActive(true);
+                choicecardsText[1].GetComponent<Text>().text = Currentconvo.ChoicesText[1];
+                choicecards[1].SetActive(true);
+                choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
+                choicecards[2].SetActive(true);
+            }
+           
         }
         
     }
@@ -124,6 +168,7 @@ public class DialogueManager : MonoBehaviour
         {
             choicecards[i].SetActive(false);
         }
+        
         //Currentconvo.ChoiceOptions[choice].effectt();
         print(Currentconvo.ChoiceOptions.Length == 2);
         if (Currentconvo.ChoiceOptions.Length == 2)
@@ -148,18 +193,33 @@ public class DialogueManager : MonoBehaviour
                 {
                     print("now");
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[0].NextConvo));
+
                 }
             }
 
         }
-        else
+        else // 3 options 
         {
-            if (Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
-
+            if(Currentconvo.speakerValue == 3 && LevelChecks[choice] == false)
             {
-                print("now");
-                StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+                print("Level check failed");
+                StartCoroutine(StartDialogue(crushLevelFail));
             }
+            else
+            {
+                if (Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
+
+                {
+                    print("now");
+                    StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+                }
+            }
+
+           
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            LevelChecks[i] = false;
         }
     }
         

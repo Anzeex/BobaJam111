@@ -9,6 +9,7 @@ public class ChoiceOption : ScriptableObject
     public bool ShouldkeepTalking;
     public ConversationOBJ NextConvo;
     public NPC.AbilityType Abilitytype;
+    
 
 }
 
