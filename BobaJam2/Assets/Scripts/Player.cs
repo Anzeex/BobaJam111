@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
+        if ( Gamemanager.crushLevel == 3)
+        {
+            Win();
+        }
     }
     public void TrainAbility(NPC.AbilityType abilityType)
     {
@@ -24,5 +28,9 @@ public class Player : MonoBehaviour
                 //Gamemanager.humorLevel++;
                 break;
         }
+    }
+    public void Win() 
+    {
+        Win();
     }
 }
