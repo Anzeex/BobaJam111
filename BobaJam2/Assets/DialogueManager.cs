@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     public AudioSource typeSound;
     public AudioClip[] soundarray;
     public bool isTyping;
+    private bool conversationIsOver = false;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
@@ -57,6 +58,7 @@ public class DialogueManager : MonoBehaviour
             while (!Input.GetMouseButtonDown(0))
             {
                 yield return null;
+                
             }
             if (typingCoroutine != null)
             {
@@ -68,10 +70,9 @@ public class DialogueManager : MonoBehaviour
             print((conversationtoospeak.ChoiceOptions.Length)+ "this is TerrainHeightmapSyncControl");
             DisplayChoices(conversationtoospeak.ChoiceOptions.Length);
         }
-
-
-
-        
+        if(Currentconvo.ShouldConvoEnd){
+            conversationIsOver = true;
+        }       
     }
     public void speakerCALL(int speaker)
     {
@@ -105,6 +106,8 @@ public class DialogueManager : MonoBehaviour
         isTyping= false;   
         // Set the typing coroutine to null when finished
         typingCoroutine = null;
+        
+        //////////////////////////////////////////////////////////////////////////////7
     }
 
     // Wait until left mouse button is clicked
@@ -242,10 +245,17 @@ public class DialogueManager : MonoBehaviour
     }
         
     
-    
+    void Update(){
+        if(Input.GetMouseButtonDown(0)){
+            if(conversationIsOver){
+                Gamemanager.ExitConvo();
+            }
+        }
+    }
     
     private void Start()
     {
+        conversationIsOver = false;
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
     }
 }

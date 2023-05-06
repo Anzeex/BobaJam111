@@ -43,6 +43,7 @@ public class GamemanagerScript : MonoBehaviour
         
     }
 
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (instance != this)
@@ -74,7 +75,8 @@ public class GamemanagerScript : MonoBehaviour
                             break;
 
                     }
-                    StartCoroutine(Dsystem.StartDialogue(convoToParse));
+                    if(Dsystem != null)
+                        StartCoroutine(Dsystem.StartDialogue(convoToParse));
                 }
             }
         }
@@ -111,5 +113,8 @@ public class GamemanagerScript : MonoBehaviour
                 crushLevel++;
                 break;
         }
+    }
+    public void ExitConvo(){
+        SceneManager.LoadScene("AnzeeMovementScene", LoadSceneMode.Single);
     }
 }
