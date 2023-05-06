@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: start3drama
+  m_EditorClassIdentifier: 
+  Sentences:
+  - You goin' out that fridge lookin chick?
+  - bro what?
+  - Don't even, someone told me who was told by someone else and so on....
+  Speaekr: 010000000000000001000000
+  speakerValue: 1
+  ShouldConvoEnd: 0
+  ChoiceOptions:
+  - {fileID: 11400000, guid: ee7d324b33e427e41a7c8089e316812f, type: 2}
+  - {fileID: 11400000, guid: a445db0d4c1b403429ace5118862c70b, type: 2}
+  ChoicesText:
+  - Yes
+  - No

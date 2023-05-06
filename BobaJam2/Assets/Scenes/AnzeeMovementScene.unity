@@ -381,16 +381,17 @@ MonoBehaviour:
   Sports:
   - {fileID: 11400000, guid: 7c52fba0e41fed44ba81626bea808f41, type: 2}
   - {fileID: 11400000, guid: 8ef599d5ad137434f8762beffd474657, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 0b4cd231b956f734eb88f49a635726e6, type: 2}
   - {fileID: 0}
   Gossip:
   - {fileID: 11400000, guid: 3cc056864e8eff94d93d98b89044e843, type: 2}
   - {fileID: 11400000, guid: b00c60471e2e4d44aba1df213e5a4200, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b45a3026110ba78459d6b23a5ac7346e, type: 2}
   - {fileID: 0}
   Humor:
   - {fileID: 11400000, guid: 18a474cf24bf43f45874d5cbcf94f824, type: 2}
   - {fileID: 11400000, guid: 388e714ff1a9dfe4a91a28ff87597f59, type: 2}
+  - {fileID: 11400000, guid: f22c559756f11a541845613da076ebf9, type: 2}
   Crush:
   - {fileID: 11400000, guid: e41436c26b7f9ed45b2493df71d0ee09, type: 2}
   - {fileID: 11400000, guid: c0a1807db11f9544992106aa4f57c327, type: 2}

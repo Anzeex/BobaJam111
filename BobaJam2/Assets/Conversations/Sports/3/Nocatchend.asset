@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: Nocatchend
+  m_EditorClassIdentifier: 
+  Sentences:
+  - Bro!!!!
+  - How did you miss that?
+  - I- uh-
+  - Dude, you suck.
+  Speaekr: 01000000010000000000000001000000
+  speakerValue: 0
+  ShouldConvoEnd: 1
+  ChoiceOptions: []
+  ChoicesText: []
