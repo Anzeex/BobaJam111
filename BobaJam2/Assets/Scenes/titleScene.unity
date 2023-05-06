@@ -316,6 +316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96aea5d9d381bb44687eab1e6ebe3ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  mainMenuPanel: {fileID: 1792331617}
+  settingsPanel: {fileID: 1580893196}
+>>>>>>> Stashed changes
 >>>>>>> main
 --- !u!1 &825464500
 GameObject:
