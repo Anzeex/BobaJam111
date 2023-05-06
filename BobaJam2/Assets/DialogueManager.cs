@@ -47,16 +47,19 @@ public class DialogueManager : MonoBehaviour
             if (conversationtoospeak.speakerValue == 0)
             {
                 //sports
+                print("Not ready");
                 StartCoroutine(StartDialogue(notReadySports));
             }
             if (conversationtoospeak.speakerValue == 1)
             {
                 //gossip
+                print("Not ready");
                 StartCoroutine(StartDialogue(notReadyDrama));
             }
             if (conversationtoospeak.speakerValue == 2)
             {
                 //humor
+                print("Not ready");
                 StartCoroutine(StartDialogue(notReadyHumor));
             }
             Debug.Log("yield break");
@@ -311,6 +314,7 @@ public class DialogueManager : MonoBehaviour
         if (Gamemanager.crushLevel < currentSubjectLevel)
         {
             Debug.Log("crushlevel too low");
+           
             return false;
         }
         else
