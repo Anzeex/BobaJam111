@@ -359,7 +359,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Humor: []
+  Humor:
+  - {fileID: 11400000, guid: 18a474cf24bf43f45874d5cbcf94f824, type: 2}
   Crush:
   - {fileID: 11400000, guid: e41436c26b7f9ed45b2493df71d0ee09, type: 2}
   convoToParse: {fileID: 0}
