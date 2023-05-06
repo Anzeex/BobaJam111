@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject mainMenuPanel;
+    public GameObject settingsPanel;
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene("AnzeeMovementScene");
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OpenSettings()
     {
-        
+        settingsPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
+    }
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
