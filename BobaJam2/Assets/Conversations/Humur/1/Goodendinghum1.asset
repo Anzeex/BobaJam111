@@ -15,8 +15,8 @@ MonoBehaviour:
   Sentences:
   - I dont know, why?
   - I didnt think we would get this far.
-  - '[Luaghing uncontrollably]'
-  Speaekr: 010000000000000001000000
+  - '[Laughing uncontrollably]'
+  Speaekr: 010000000100000001000000
   speakerValue: 2
   ShouldConvoEnd: 1
   ChoiceOptions: []

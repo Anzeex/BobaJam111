@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: badchoice2
   m_EditorClassIdentifier: 
   Sentences:
-  - Yea, yea whatever.
+  - Yea yea whatever.
   Speaekr: 01000000
   speakerValue: 1
   ShouldConvoEnd: 1

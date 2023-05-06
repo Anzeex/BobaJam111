@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CorrectChoice1crush1
   m_EditorClassIdentifier: 
   Sentences:
-  - Hehehe, Your funny!!!
+  - hehehe, you're funny!!!
   Speaekr: 01000000
   speakerValue: 3
   ShouldConvoEnd: 1

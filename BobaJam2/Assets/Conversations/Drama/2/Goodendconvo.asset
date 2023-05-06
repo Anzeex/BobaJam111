@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Goodendconvo
   m_EditorClassIdentifier: 
   Sentences:
-  - I Know RIGHT?!?!?!?!
-  - LIEK DAMNNNNN???
+  - I KNOW RIGHT?!?!?!?!
+  - LIKE DAMNNNNN???
   Speaekr: 0100000001000000
   speakerValue: 1
   ShouldConvoEnd: 1

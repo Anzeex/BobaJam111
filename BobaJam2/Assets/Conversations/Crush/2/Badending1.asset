@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Badending1
   m_EditorClassIdentifier: 
   Sentences:
-  - Isn't Danny one of your best friends, why such a hater?
+  - Isn't Danny one of your best friends, why u such a hater?
   Speaekr: 01000000
   speakerValue: 3
   ShouldConvoEnd: 1
