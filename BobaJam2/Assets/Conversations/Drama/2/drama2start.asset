@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: drama2start
   m_EditorClassIdentifier: 
   Sentences:
-  - 'I heard Adam just got Dumped! '
-  - Oh really, sad for him.
+  - 'I heard Adam just got dumped! '
+  - Oh really? Sad for him.
   - But its so funny!
   Speaekr: 010000000000000001000000
   speakerValue: 1

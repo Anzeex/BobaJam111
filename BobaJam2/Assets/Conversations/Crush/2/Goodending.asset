@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Goodending
   m_EditorClassIdentifier: 
   Sentences:
-  - So I've heard, Hehehe!
+  - So I've heard, hehehe!
   Speaekr: 01000000
   speakerValue: 3
   ShouldConvoEnd: 1
