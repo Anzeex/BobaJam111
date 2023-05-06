@@ -17,6 +17,7 @@ public class GamemanagerScript : MonoBehaviour
     public ConversationOBJ[] Gossip;
     public ConversationOBJ[] Humor;
     public ConversationOBJ[] Crush;
+    public ConversationOBJ[] FailCovnos;
     public ConversationOBJ convoToParse;
     public DialogueManager Dsystem;
     // Start is called before the first frame update
@@ -76,7 +77,39 @@ public class GamemanagerScript : MonoBehaviour
 
                     }
                     if(Dsystem != null)
-                        StartCoroutine(Dsystem.StartDialogue(convoToParse));
+                        if (convoToParse.speakerValue < 3)
+                        {
+                            int currentSubjectLevel = 0;
+                            if (convoToParse.speakerValue == 0)
+                            {
+                                //sports
+                                currentSubjectLevel = sportsLevel;
+                            }
+                            if (convoToParse.speakerValue == 1)
+                            {
+                                //sports
+                                currentSubjectLevel = gossipLevel;
+                            }
+                            if (convoToParse.speakerValue == 2)
+                            {
+                                //sports
+                                currentSubjectLevel = humorLevel;
+                            }
+                            if (crushLevel < currentSubjectLevel)
+                            {
+                                StartCoroutine(Dsystem.StartDialogue(FailCovnos[convoToParse.speakerValue]));
+                            }
+                            else
+                            {
+                                StartCoroutine(Dsystem.StartDialogue(convoToParse));
+                            }
+                            
+                        }
+                    else
+                        {
+                            StartCoroutine(Dsystem.StartDialogue(convoToParse));
+                        }
+                       
                 }
             }
         }
