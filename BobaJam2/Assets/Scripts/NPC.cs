@@ -9,14 +9,16 @@ public class NPC : MonoBehaviour
     {
         Sports,
         Gossip,
-        Humor
+        Humor,
+        Crush,
+        Empty,
     }
 
     public void TrainAbility(Player player)
     {
         if (player != null)
         {
-            player.TrainAbility(abilityToTrain);
+            //player.TrainAbility(abilityToTrain);
             Debug.Log($"trained {player.gameObject.name} in {abilityToTrain}!");
         }
         else

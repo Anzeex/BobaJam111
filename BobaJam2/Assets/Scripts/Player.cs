@@ -1,23 +1,27 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int sportsLevel;
-    public int gossipLevel;
-    public int humorLevel;
+    public GamemanagerScript Gamemanager;
 
+    private void Start()
+    {
+        Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
+    }
     public void TrainAbility(NPC.AbilityType abilityType)
     {
+
         switch (abilityType)
         {
             case NPC.AbilityType.Sports:
-                sportsLevel++;
+                Gamemanager.sportsLevel++;
                 break;
             case NPC.AbilityType.Gossip:
-                gossipLevel++;
+                Gamemanager.gossipLevel++;
                 break;
             case NPC.AbilityType.Humor:
-                humorLevel++;
+                Gamemanager.humorLevel++;
                 break;
         }
     }

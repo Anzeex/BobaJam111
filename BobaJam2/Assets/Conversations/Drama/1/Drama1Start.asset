@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: Drama1Start
+  m_EditorClassIdentifier: 
+  Sentences:
+  - Did you hear what Jenny did the other week?
+  - Oh, no I missed it?
+  - yea, she pushed Mathew down the slide the other day.
+  Speaekr: 010000000000000001000000
+  ShouldConvoEnd: 0
+  ChoiceOptions:
+  - {fileID: 11400000, guid: c60310e5d525d054aba8fab4479deda8, type: 2}
+  - {fileID: 11400000, guid: f32529a08b535b345b8afdb770c5a103, type: 2}
+  ChoicesText:
+  - No she didnt!!!
+  - oh, cool!

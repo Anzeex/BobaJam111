@@ -8,9 +8,7 @@ public class ChoiceOption : ScriptableObject
 {
     public bool ShouldkeepTalking;
     public ConversationOBJ NextConvo;
-    public void effectt()
-    {
-        //This is where the effect happens. 
-    }
+    public NPC.AbilityType Abilitytype;
+
 }
 

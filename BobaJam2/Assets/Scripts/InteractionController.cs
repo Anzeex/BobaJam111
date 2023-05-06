@@ -5,10 +5,12 @@ public class InteractionController : MonoBehaviour
     public float interactionDistance = 2f;
     public LayerMask npcLayer;
     private Player player;
+    public GamemanagerScript Gamemanager;
 
     void Start()
     {
         player = GetComponent<Player>();
+        Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class InteractionController : MonoBehaviour
             if (npc != null)
             {
                 npc.TrainAbility(player);
+                Gamemanager.StartConvo(npc.abilityToTrain);
             }
         }
     }

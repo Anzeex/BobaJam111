@@ -120,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         {
             choicecards[i].SetActive(false);
         }
-        Currentconvo.ChoiceOptions[choice].effectt();
+        //Currentconvo.ChoiceOptions[choice].effectt();
         if (!Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
 
         {
