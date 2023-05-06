@@ -21,5 +21,11 @@ public class TopDownController : MonoBehaviour
 
         movement = new Vector2(horizontalInput, verticalInput).normalized;
         rb.velocity = movement * moveSpeed;
+        if(rb.velocity.x < 0){
+            gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        }
+        if(rb.velocity.x > 0){
+            gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        }
     }
 }
