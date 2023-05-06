@@ -41,7 +41,6 @@ public class DialogueManager : MonoBehaviour
     private bool conversationIsOver = false;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
-        
         sentecneOn = 0;
         Currentconvo = conversationtoospeak;
         speakers[0].sprite = speakersImages[conversationtoospeak.speakerValue];
