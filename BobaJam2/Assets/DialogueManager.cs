@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
             speakerCALL(conversationtoospeak.Speaekr[i]);
             // Start the typing coroutine to display the dialogue
             typingCoroutine = StartCoroutine(TypeDialogue());
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(typingSpeed*currentDialogue.Length+.5f);
             while (!Input.GetMouseButtonDown(0))
             {
                 yield return null;

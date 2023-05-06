@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: crush1start
+  m_EditorClassIdentifier: 
+  Sentences:
+  - I work out pretty ofton.
+  - Oh do you, how much do you lift?
+  - 'I have no arms, so not much. '
+  Speaekr: 000000000100000000000000
+  speakerValue: 3
+  ShouldConvoEnd: 0
+  ChoiceOptions:
+  - {fileID: 11400000, guid: 6015c82be7bd181449be459dee2f0bec, type: 2}
+  - {fileID: 11400000, guid: 9100dcd4509cba7408ed109823b617cb, type: 2}
+  - {fileID: 11400000, guid: 39bad02735956ec498b37c0d90dd491e, type: 2}
+  ChoicesText:
+  - My head press is pretty good though.
+  - I heard Danny's bench press is not as high as he says...
+  - Honestly you look like you could use a run though.
