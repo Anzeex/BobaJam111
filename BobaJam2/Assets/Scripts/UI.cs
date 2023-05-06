@@ -7,6 +7,8 @@ public class UI : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject settingsPanel;
+    public Animator animator;
+    public AnimationClip transitionAnimation;
     public void StartGame()
     {
         SceneManager.LoadScene("AnzeeMovementScene");
@@ -24,5 +26,20 @@ public class UI : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void StartTransition()
+    {
+        StartCoroutine(TransitionCoroutine(("AnzeeMovementScene")));
+    }
+
+    private IEnumerator TransitionCoroutine(string nextSceneName)
+    {
+        animator.Play(transitionAnimation.name);
+
+        // Wait for the animation to finish
+        yield return new WaitForSeconds(transitionAnimation.length);
+
+        // Load the next scene
+        SceneManager.LoadScene(nextSceneName);
     }
 }
