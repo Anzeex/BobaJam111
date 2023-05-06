@@ -21,9 +21,9 @@ MonoBehaviour:
   speakerValue: 3
   ShouldConvoEnd: 0
   ChoiceOptions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: be8ed84b8edd71940abf34c71dfd5679, type: 2}
+  - {fileID: 11400000, guid: dfae8c9106631334cbc9ac40fca2f517, type: 2}
+  - {fileID: 11400000, guid: d7234db42db472f468dad5c821af638c, type: 2}
   ChoicesText:
   - Sorry, I was busy playing Socerball?
   - Was that that the one with the huge scandel?

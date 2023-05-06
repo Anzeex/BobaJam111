@@ -116,6 +116,7 @@ public class DialogueManager : MonoBehaviour
             //check if speaker is crush
             if(Currentconvo.speakerValue== 3)
             {
+                print(Gamemanager.sportsLevel);
                 if (Gamemanager.sportsLevel == (Gamemanager.crushLevel + 1))
                 {
                     choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
@@ -233,6 +234,6 @@ public class DialogueManager : MonoBehaviour
     
     private void Start()
     {
-       
+        Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
     }
 }

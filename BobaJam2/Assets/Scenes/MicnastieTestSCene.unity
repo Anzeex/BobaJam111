@@ -432,7 +432,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6a2eda406a3b55e48a039b3a361955fd, type: 3}
   - {fileID: 21300000, guid: 227bf0f3613434843b587ba914998f8c, type: 3}
   - {fileID: 21300000, guid: 57b3f1848d41fa74d8792c2267370ca2, type: 3}
-  LevelChecks: 
+  LevelChecks: 00000000
   typeSound: {fileID: 78182561}
 --- !u!4 &378079415
 Transform:
