@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7104ea9fbb5665409b0288e7b5b787b, type: 3}
-  m_Name: Drama1StartChoice2
+  m_Name: Sport1Choice2
   m_EditorClassIdentifier: 
-  ShouldkeepTalking: 0
-  NextConvo: {fileID: 0}
-  Abilitytype: 1
+  ShouldkeepTalking: 1
+  NextConvo: {fileID: 11400000, guid: b849a9fddea9e124a8f467808a12ba15, type: 2}
+  Abilitytype: 0

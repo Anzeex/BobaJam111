@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
+  m_Name: Sports2
+  m_EditorClassIdentifier: 
+  Sentences:
+  - Hey, did you see our basketball team's game last night? They totally crushed
+    it!
+  - Oh, I think I missed that. What happened?
+  - They were just super in sync, you know? Their passing and communication were
+    on point. Really made a difference.
+  Speaekr: 010000000000000001000000
+  ShouldConvoEnd: 0
+  ChoiceOptions:
+  - {fileID: 11400000, guid: 5f127df90b90fd749a31cb645cb526b8, type: 2}
+  - {fileID: 11400000, guid: 5bfd7729d706ed14685a796c00ed9a05, type: 2}
+  ChoicesText:
+  - No she didnt!!!
+  - oh, cool!
