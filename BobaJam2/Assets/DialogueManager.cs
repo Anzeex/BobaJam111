@@ -281,6 +281,7 @@ public class DialogueManager : MonoBehaviour
     }
     private bool CrushLevelCheck(ConversationOBJ c)
     {
+        Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
         int currentSubjectLevel = 0;
         if (c.speakerValue == 0)
         {
@@ -290,6 +291,7 @@ public class DialogueManager : MonoBehaviour
         if (c.speakerValue == 1)
         {
             //gossip
+            print(Gamemanager.gossipLevel);
             currentSubjectLevel = Gamemanager.gossipLevel;
         }
         if (c.speakerValue == 2)
