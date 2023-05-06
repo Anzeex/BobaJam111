@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HumorConvoStart
   m_EditorClassIdentifier: 
   Sentences:
-  - How did the chicked cross the road
+  - How did the chicken cross the road
   - That isn't how it goes...
   - Are your sure?
   Speaekr: 010000000000000001000000

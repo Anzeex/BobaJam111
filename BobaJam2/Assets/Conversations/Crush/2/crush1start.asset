@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: crush1start
   m_EditorClassIdentifier: 
   Sentences:
-  - I work out pretty ofton.
+  - I work out pretty often.
   - Oh do you, how much do you lift?
   - 'I have no arms, so not much. '
   Speaekr: 000000000100000000000000

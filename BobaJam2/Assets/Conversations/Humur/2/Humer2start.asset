@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
-  m_Name: drama2start
+  m_Name: Humer2start
   m_EditorClassIdentifier: 
   Sentences:
-  - 'I heard Adam just got Dumped! '
-  - Oh really, sad for him.
-  - But its so funny!
+  - Wanna see somethin really funny?
+  - Oh, what?
+  - You.
   Speaekr: 010000000000000001000000
-  speakerValue: 1
+  speakerValue: 2
   ShouldConvoEnd: 0
   ChoiceOptions:
-  - {fileID: 11400000, guid: 4cccdfbf6f080e14ab6bc869cc977cf9, type: 2}
-  - {fileID: 11400000, guid: a7dcf2e83e9187d49a101997d3b7a973, type: 2}
+  - {fileID: 11400000, guid: b8e26599cac56a748ac5b3498997b5c9, type: 2}
+  - {fileID: 11400000, guid: 2c86efb1fdf5f184f87a4c99b4f13abf, type: 2}
   ChoicesText:
-  - Im sure he'll find someone better.
-  - His ex was so fine though!!!!
+  - '[Punch]'
+  - '[Laugh It off]'

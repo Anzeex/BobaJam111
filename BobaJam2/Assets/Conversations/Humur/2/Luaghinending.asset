@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
-  m_Name: wrongChoice
+  m_Name: Luaghinending
   m_EditorClassIdentifier: 
   Sentences:
-  - Oh..... not that kind of Football.
-  Speaekr: 01000000
-  speakerValue: 0
+  - '[Laughing unontrollably]'
+  - You took that well.
+  - thats the most important part about being a comedian.
+  Speaekr: 010000000100000001000000
+  speakerValue: 2
   ShouldConvoEnd: 1
   ChoiceOptions: []
   ChoicesText: []

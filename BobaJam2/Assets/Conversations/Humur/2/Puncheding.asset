@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4a5f3910ab0ae74ba25b1a50b785d8f, type: 3}
-  m_Name: wrongChoice
+  m_Name: Puncheding
   m_EditorClassIdentifier: 
   Sentences:
-  - Oh..... not that kind of Football.
-  Speaekr: 01000000
-  speakerValue: 0
+  - OOOOWWWW!!!!!!!
+  - YOUR SUCH A B-
+  Speaekr: 0100000001000000
+  speakerValue: 2
   ShouldConvoEnd: 1
   ChoiceOptions: []
   ChoicesText: []
