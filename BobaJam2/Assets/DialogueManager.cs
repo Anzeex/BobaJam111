@@ -192,7 +192,9 @@ public class DialogueManager : MonoBehaviour
                 if (Currentconvo.ChoiceOptions[1].ShouldkeepTalking)
 
                 {
+                    Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[1].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[1].NextConvo));
+                    
                 }
 
             }
@@ -203,8 +205,10 @@ public class DialogueManager : MonoBehaviour
 
                 {
                     print("now");
+                    Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[0].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[0].NextConvo));
-
+                    
+                   
                 }
             }
 
@@ -222,12 +226,15 @@ public class DialogueManager : MonoBehaviour
 
                 {
                     print("now");
+                    Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[choice].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+                   
                 }
             }
 
            
         }
+        
         for (int i = 0; i < 3; i++)
         {
             LevelChecks[i] = false;
