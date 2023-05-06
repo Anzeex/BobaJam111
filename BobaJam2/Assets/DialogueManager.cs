@@ -33,12 +33,35 @@ public class DialogueManager : MonoBehaviour
     public bool[] LevelChecks;
     public AudioSource typeSound;
     public AudioClip[] soundarray;
+    public ConversationOBJ notReadyDrama;
+    public ConversationOBJ notReadySports;
+    public ConversationOBJ notReadyHumor;
+
     public bool isTyping;
     private bool conversationIsOver = false;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
-        sentecneOn= 0;
-        Currentconvo= conversationtoospeak;
+        if (!CrushLevelCheck(conversationtoospeak))
+        {
+            if (conversationtoospeak.speakerValue == 0)
+            {
+                //sports
+                StartCoroutine(StartDialogue(notReadySports));
+            }
+            if (conversationtoospeak.speakerValue == 1)
+            {
+                //gossip
+                StartCoroutine(StartDialogue(notReadyDrama));
+            }
+            if (conversationtoospeak.speakerValue == 2)
+            {
+                //humor
+                StartCoroutine(StartDialogue(notReadyHumor));
+            }
+            yield break;
+        }
+        sentecneOn = 0;
+        Currentconvo = conversationtoospeak;
         speakers[0].sprite = speakersImages[conversationtoospeak.speakerValue];
         // Stop any currently running typing coroutine
         if (typingCoroutine != null)
@@ -54,25 +77,26 @@ public class DialogueManager : MonoBehaviour
             speakerCALL(conversationtoospeak.Speaekr[i]);
             // Start the typing coroutine to display the dialogue
             typingCoroutine = StartCoroutine(TypeDialogue());
-            yield return new WaitForSeconds(typingSpeed*currentDialogue.Length+.5f);
+            yield return new WaitForSeconds(typingSpeed * currentDialogue.Length + .5f);
             while (!Input.GetMouseButtonDown(0))
             {
                 yield return null;
-                
+
             }
             if (typingCoroutine != null)
             {
                 StopCoroutine(typingCoroutine);
             }
         }
-        if(!conversationtoospeak.ShouldConvoEnd)
+        if (!conversationtoospeak.ShouldConvoEnd)
         {
-            print((conversationtoospeak.ChoiceOptions.Length)+ "this is TerrainHeightmapSyncControl");
+            print((conversationtoospeak.ChoiceOptions.Length) + "this is TerrainHeightmapSyncControl");
             DisplayChoices(conversationtoospeak.ChoiceOptions.Length);
         }
-        if(Currentconvo.ShouldConvoEnd){
+        if (Currentconvo.ShouldConvoEnd)
+        {
             conversationIsOver = true;
-        }       
+        }
     }
     public void speakerCALL(int speaker)
     {
@@ -87,7 +111,7 @@ public class DialogueManager : MonoBehaviour
         // Clear the dialogue text
 
         dialogueText.text = "";
-      
+
         // Loop through each character in the dialogue
         for (int i = 0; i < currentDialogue.Length; i++)
         {
@@ -103,10 +127,10 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         typeSound.Stop();
-        isTyping= false;   
+        isTyping = false;
         // Set the typing coroutine to null when finished
         typingCoroutine = null;
-        
+
         //////////////////////////////////////////////////////////////////////////////7
     }
 
@@ -125,7 +149,7 @@ public class DialogueManager : MonoBehaviour
         {
             //used to be for loop, chenged becuase no work, sorry, not sorry
             //check if speaker is crush
-            if(Currentconvo.speakerValue== 3)
+            if (Currentconvo.speakerValue == 3)
             {
                 print(Gamemanager.sportsLevel);
                 if (Gamemanager.sportsLevel == (Gamemanager.crushLevel + 1))
@@ -171,9 +195,9 @@ public class DialogueManager : MonoBehaviour
                 choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
                 choicecards[2].SetActive(true);
             }
-           
+
         }
-        
+
     }
     public void diolougeChooice(int choice)
     {
@@ -182,7 +206,7 @@ public class DialogueManager : MonoBehaviour
         {
             choicecards[i].SetActive(false);
         }
-        
+
         //Currentconvo.ChoiceOptions[choice].effectt();
         print(Currentconvo.ChoiceOptions.Length == 2);
         if (Currentconvo.ChoiceOptions.Length == 2)
@@ -197,7 +221,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[1].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[1].NextConvo));
-                    
+
                 }
 
             }
@@ -210,15 +234,15 @@ public class DialogueManager : MonoBehaviour
                     print("now");
                     Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[0].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[0].NextConvo));
-                    
-                   
+
+
                 }
             }
 
         }
         else // 3 options 
         {
-            if(Currentconvo.speakerValue == 3 && LevelChecks[choice] == false)
+            if (Currentconvo.speakerValue == 3 && LevelChecks[choice] == false)
             {
                 print("Level check failed");
                 StartCoroutine(StartDialogue(crushLevelFail));
@@ -231,28 +255,63 @@ public class DialogueManager : MonoBehaviour
                     print("now");
                     Gamemanager.TrainAbility(Currentconvo.ChoiceOptions[choice].Abilitytype);
                     StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
-                   
+
                 }
             }
 
-           
+
         }
-        
+
         for (int i = 0; i < 3; i++)
         {
             LevelChecks[i] = false;
         }
     }
-        
-    
-    void Update(){
-        if(Input.GetMouseButtonDown(0)){
-            if(conversationIsOver){
+
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (conversationIsOver)
+            {
                 Gamemanager.ExitConvo();
             }
         }
     }
-    
+    private bool CrushLevelCheck(ConversationOBJ c)
+    {
+        int currentSubjectLevel = 0;
+        if (c.speakerValue == 0)
+        {
+            //sports
+            currentSubjectLevel = Gamemanager.sportsLevel;
+        }
+        if (c.speakerValue == 1)
+        {
+            //gossip
+            currentSubjectLevel = Gamemanager.gossipLevel;
+        }
+        if (c.speakerValue == 2)
+        {
+            //humor
+            currentSubjectLevel = Gamemanager.humorLevel;
+        }
+        if (c.speakerValue == 3)
+        {
+            return true;
+            //crush
+        }
+        if (Gamemanager.crushLevel <= currentSubjectLevel)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void Start()
     {
         conversationIsOver = false;

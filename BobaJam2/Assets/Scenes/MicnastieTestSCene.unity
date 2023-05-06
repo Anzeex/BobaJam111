@@ -453,6 +453,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 601a92f77d7ab0742b4f92f70f74b85d, type: 3}
   - {fileID: 8300000, guid: 8dbd71316bffd2b46b1fcc6121695c25, type: 3}
   - {fileID: 8300000, guid: b51087a0dbd2ee14ca91ee7df1fab4bd, type: 3}
+  notReadyDrama: {fileID: 11400000, guid: a801f9a6e5a853f4ca6f54dbef152278, type: 2}
+  notReadySports: {fileID: 11400000, guid: 0d9f5e5560dc57a48ba117b986719c2d, type: 2}
+  notReadyHumor: {fileID: 11400000, guid: c5c1d87367fc6cb45a9737422a51ff4c, type: 2}
   isTyping: 0
 --- !u!4 &378079415
 Transform:
