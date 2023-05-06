@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AnzeeMovementScene.unity
+    guid: 06f32575dcd1e9d479651e98fe7347b4
+  - enabled: 1
+    path: Assets/Scenes/titleScene.unity
+    guid: 28485b571ddcec941b4661c4088a29c8
+  - enabled: 1
+    path: Assets/Scenes/MicnastieTestSCene.unity
+    guid: ecdaa266f1fea1144be384a2432914bb
   m_configObjects: {}
