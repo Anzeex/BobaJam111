@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentecneOn= 0;
         Currentconvo= conversationtoospeak;
-        //speakers[1].sprite = speakers
+        speakers[0].sprite = speakersImages[conversationtoospeak.speakerValue];
         // Stop any currently running typing coroutine
         if (typingCoroutine != null)
         {

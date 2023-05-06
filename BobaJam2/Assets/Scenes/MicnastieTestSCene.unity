@@ -319,7 +319,6 @@ MonoBehaviour:
   - {fileID: 1366042109}
   - {fileID: 1717806251}
   currentSpeaker: 0
-  testconvo: {fileID: 11400000, guid: ebd954db69d896d4e993862dee00bf7d, type: 2}
   Currentconvo: {fileID: 0}
   choicecards:
   - {fileID: 2125390329}
@@ -329,6 +328,11 @@ MonoBehaviour:
   - {fileID: 403784247}
   - {fileID: 1161642493}
   - {fileID: 1635338699}
+  speakersImages:
+  - {fileID: 21300000, guid: d4c005c816d37ac418b2c69cb9e30856, type: 3}
+  - {fileID: 21300000, guid: 6a2eda406a3b55e48a039b3a361955fd, type: 3}
+  - {fileID: 21300000, guid: 227bf0f3613434843b587ba914998f8c, type: 3}
+  - {fileID: 21300000, guid: 57b3f1848d41fa74d8792c2267370ca2, type: 3}
 --- !u!4 &378079415
 Transform:
   m_ObjectHideFlags: 0
@@ -910,7 +914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 227bf0f3613434843b587ba914998f8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57b3f1848d41fa74d8792c2267370ca2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1204,7 +1208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4c005c816d37ac418b2c69cb9e30856, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e019250e234b18d4bba034cd21b7d37b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

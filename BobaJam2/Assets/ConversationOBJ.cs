@@ -10,7 +10,7 @@ public class ConversationOBJ : ScriptableObject
     public string[] Sentences;
     // we will compare each sentecne spoken to the speaker array to see who is speaking
     public int[] Speaekr;
-
+    public int speakerValue;
     public bool ShouldConvoEnd;
   //if not
     public ChoiceOption[] ChoiceOptions;

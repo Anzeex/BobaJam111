@@ -16,6 +16,7 @@ MonoBehaviour:
   - I know right?!?!?
   - I was all like, FOR REAL, then she was all like YEAAA!!!!
   Speaekr: 0100000001000000
+  speakerValue: 1
   ShouldConvoEnd: 1
   ChoiceOptions: []
   ChoicesText: []

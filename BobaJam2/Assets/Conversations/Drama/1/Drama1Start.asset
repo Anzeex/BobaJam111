@@ -17,6 +17,7 @@ MonoBehaviour:
   - Oh, no I missed it?
   - yea, she pushed Mathew down the slide the other day.
   Speaekr: 010000000000000001000000
+  speakerValue: 1
   ShouldConvoEnd: 0
   ChoiceOptions:
   - {fileID: 11400000, guid: c60310e5d525d054aba8fab4479deda8, type: 2}
