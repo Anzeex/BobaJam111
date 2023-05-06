@@ -418,6 +418,16 @@ MonoBehaviour:
   humorLevel: 0
   crushLevel: 0
   scenenum: 0
+  Sports: []
+  Gossip:
+  - {fileID: 11400000, guid: 3cc056864e8eff94d93d98b89044e843, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Humor: []
+  Crush: []
+  convoToParse: {fileID: 0}
+  Dsystem: {fileID: 0}
 --- !u!4 &484664723
 Transform:
   m_ObjectHideFlags: 0
