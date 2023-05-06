@@ -24,10 +24,13 @@ public class DialogueManager : MonoBehaviour
     private int sentecneOn;
     public int currentSpeaker = 0;
     public ConversationOBJ testconvo;
+    public ConversationOBJ Currentconvo;
+    public GameObject[] choicecards;
+    public GameObject[] choicecardsText;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
     {
         sentecneOn= 0;
-        
+        Currentconvo= conversationtoospeak;
         // Stop any currently running typing coroutine
         if (typingCoroutine != null)
         {
@@ -51,6 +54,10 @@ public class DialogueManager : MonoBehaviour
             {
                 StopCoroutine(typingCoroutine);
             }
+        }
+        if(!conversationtoospeak.ShouldConvoEnd)
+        {
+            DisplayChoices(conversationtoospeak.ChoiceOptions.Length);
         }
 
 
@@ -83,11 +90,48 @@ public class DialogueManager : MonoBehaviour
         // Set the typing coroutine to null when finished
         typingCoroutine = null;
     }
-    
-        // Wait until left mouse button is clicked
-       
 
-       
+    // Wait until left mouse button is clicked
+    public void DisplayChoices(int NumBofChoices)
+    {
+        if (NumBofChoices == 2)
+        {
+            choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
+            choicecards[0].SetActive(true);
+            choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
+            choicecards[2].SetActive(true);
+        }
+        else
+        {
+            //used to be for loop, chenged becuase no work, sorry, not sorry
+            choicecardsText[0].GetComponent<Text>().text = Currentconvo.ChoicesText[0];
+            choicecards[0].SetActive(true);
+            choicecardsText[1].GetComponent<Text>().text = Currentconvo.ChoicesText[1];
+            choicecards[1].SetActive(true);
+            choicecardsText[2].GetComponent<Text>().text = Currentconvo.ChoicesText[2];
+            choicecards[2].SetActive(true);
+        }
+        
+    }
+    public void diolougeChooice(int choice)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            choicecards[i].SetActive(false);
+        }
+        Currentconvo.ChoiceOptions[choice].effectt();
+        if (!Currentconvo.ChoiceOptions[choice].ShouldkeepTalking)
+
+        {
+            StartCoroutine(StartDialogue(Currentconvo.ChoiceOptions[choice].NextConvo));
+        }
+        else
+        {
+            //end convo
+        }
+        
+    } 
+     
     
     private void Start()
     {
