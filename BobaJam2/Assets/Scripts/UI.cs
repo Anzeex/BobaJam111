@@ -9,6 +9,8 @@ public class UI : MonoBehaviour
     public GameObject settingsPanel;
     public Animator animator;
     public AnimationClip transitionAnimation,ani;
+    public AudioClip[] Clips;
+    public AudioSource source;
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -50,5 +52,10 @@ public class UI : MonoBehaviour
         animator.Play(ani.name);
         yield return new WaitForSeconds(ani.length);
         Destroy(gameObject);
+    }
+    public void PLAYSOUND(int sound )
+    {
+        source.clip = Clips[sound];
+        source.Play();
     }
 }
