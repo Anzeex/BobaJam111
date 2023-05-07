@@ -22,13 +22,17 @@ public class GamemanagerScript : MonoBehaviour
     public DialogueManager Dsystem;
     public AudioSource thisscource;
     public AudioClip audioClip;
+    public AudioClip monolouge;
     public Animator[] CrewAnimators;
     public AnimationClip[] respectiveclips;
     public TopDownController Playerplayer; 
     // Start is called before the first frame update
 
     private static GamemanagerScript instance;
+    [SerializeField] private string objectToFind;  // Name of the GameObject to find and activate
 
+    private GameObject panelToActivate;
+    
     void Awake()
     {
         if (instance == null)
@@ -48,17 +52,33 @@ public class GamemanagerScript : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
         thisscource = GetComponent<AudioSource>();
         StartCoroutine(introAnims());
-       
+        panelToActivate = GameObject.Find(objectToFind);
+        panelToActivate.SetActive(false);
+
+    }
+    public IEnumerator Soundsmusic()
+    {
+        thisscource.Stop();
+        thisscource.clip = monolouge;
+        thisscource.Play();
+        print("shouldbeplaying");
+        yield return new WaitForSeconds(monolouge.length);
+        thisscource.clip = audioClip; thisscource.Play();
     }
     public IEnumerator introAnims()
     {
-       
+        StartCoroutine(Soundsmusic());  
         for (int i = 0; i < CrewAnimators.Length; i++)
         {
             CrewAnimators[i].SetTrigger("intro");
+        }
+        for (int i = 0; i < CrewAnimators.Length; i++)
+        {
+           
+            CrewAnimators[i].enabled = true;
+            yield return new WaitForSeconds(7);
             print("animdoneforintro");
         }
-
         yield return new WaitForSeconds(5);
         Playerplayer.canwalk = true;    
     }
@@ -169,5 +189,21 @@ public class GamemanagerScript : MonoBehaviour
         Debug.Log("ExitConvo called");
         SceneManager.LoadScene("AnzeeMovementScene", LoadSceneMode.Single);
         Debug.Log("ExitConvo completed");
+        panelToActivate = GameObject.Find(objectToFind);
+        panelToActivate.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Tab))  // Check if the Tab key is being held down
+        {
+            if (panelToActivate != null && !panelToActivate.activeSelf)  // Check if the panel is not already active
+            {
+                panelToActivate.SetActive(true);  // Activate the panel
+            }
+        }
+        else if (panelToActivate != null && panelToActivate.activeSelf)  // Check if the panel is active
+        {
+            panelToActivate.SetActive(false);  // Deactivate the panel
+        }
     }
 }
