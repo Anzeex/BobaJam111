@@ -930,16 +930,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c52fba0e41fed44ba81626bea808f41, type: 2}
   - {fileID: 11400000, guid: 8ef599d5ad137434f8762beffd474657, type: 2}
   - {fileID: 11400000, guid: 0b4cd231b956f734eb88f49a635726e6, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: aba935726e9d1124bb4aa89e871648a3, type: 2}
   Gossip:
   - {fileID: 11400000, guid: 3cc056864e8eff94d93d98b89044e843, type: 2}
   - {fileID: 11400000, guid: b00c60471e2e4d44aba1df213e5a4200, type: 2}
   - {fileID: 11400000, guid: b45a3026110ba78459d6b23a5ac7346e, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c721267550cff0f4da63439ba3f77ee4, type: 2}
   Humor:
   - {fileID: 11400000, guid: 18a474cf24bf43f45874d5cbcf94f824, type: 2}
   - {fileID: 11400000, guid: 388e714ff1a9dfe4a91a28ff87597f59, type: 2}
   - {fileID: 11400000, guid: f22c559756f11a541845613da076ebf9, type: 2}
+  - {fileID: 11400000, guid: 853ca220e6d249847a9f11540b4fa716, type: 2}
   Crush:
   - {fileID: 11400000, guid: e41436c26b7f9ed45b2493df71d0ee09, type: 2}
   - {fileID: 11400000, guid: c0a1807db11f9544992106aa4f57c327, type: 2}
@@ -1173,6 +1174,7 @@ RectTransform:
   m_Children:
   - {fileID: 1098593740}
   - {fileID: 327030268}
+  - {fileID: 1684605108}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1922,6 +1924,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582718390}
   m_CullTransparentMesh: 1
+--- !u!1 &1684605107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684605108}
+  - component: {fileID: 1684605110}
+  - component: {fileID: 1684605109}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1684605108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684605107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 582749296}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -101, y: -14}
+  m_SizeDelta: {x: 416.8501, y: 260.2395}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1684605109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684605107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9db6549853649214da38587bd25dcacc, type: 3}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: W Rizz Indeed
+--- !u!222 &1684605110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684605107}
+  m_CullTransparentMesh: 1
 --- !u!1 &1847924917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2302,7 @@ MonoBehaviour:
   Wincon: {fileID: 327030271}
   so: {fileID: 1978180537}
   clip: {fileID: 8300000, guid: ccb6c0e70beb8374cade59788fc17c0c, type: 3}
+  wintext: {fileID: 1684605107}
 --- !u!95 &1978180536
 Animator:
   serializedVersion: 5

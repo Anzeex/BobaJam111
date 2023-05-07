@@ -121,19 +121,24 @@ public class GamemanagerScript : MonoBehaviour
                 Dsystem = GameObject.FindObjectOfType<DialogueManager>();
                 if (abilityType != NPC.AbilityType.Empty)
                 {
+                    print("Before Switch");
                     switch (abilityType)
                     {
                         case NPC.AbilityType.Sports:
                             convoToParse = Sports[sportsLevel];
+                            print("sport fail");
                             break;
                         case NPC.AbilityType.Gossip:
                             convoToParse = Gossip[gossipLevel];
+                            print("gossip fail");
                             break;
                         case NPC.AbilityType.Humor:
                             convoToParse = Humor[humorLevel];
+                            print("funny fail"); 
                             break;
                         case NPC.AbilityType.Crush:
                             convoToParse = Crush[crushLevel];
+                           
                             break;
 
                     }
@@ -141,6 +146,7 @@ public class GamemanagerScript : MonoBehaviour
                         if (convoToParse.speakerValue < 3)
                         {
                             int currentSubjectLevel = 0;
+                            print(convoToParse.speakerValue+"speakervalue");
                             if (convoToParse.speakerValue == 0)
                             {
                                 //sports

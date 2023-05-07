@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Animator Wincon;
     public AudioSource so;
     public AudioClip clip;
+    public GameObject wintext;
     private void Start()
     {
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
@@ -38,5 +39,6 @@ public class Player : MonoBehaviour
         mmTroller.canwalk = false;
         so.clip= clip;
         so.Play();
+        wintext.SetActive(true);
     }
 }
