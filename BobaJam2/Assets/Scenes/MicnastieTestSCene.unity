@@ -456,7 +456,7 @@ MonoBehaviour:
   notReadyDrama: {fileID: 11400000, guid: a801f9a6e5a853f4ca6f54dbef152278, type: 2}
   notReadySports: {fileID: 11400000, guid: 0d9f5e5560dc57a48ba117b986719c2d, type: 2}
   notReadyHumor: {fileID: 11400000, guid: c5c1d87367fc6cb45a9737422a51ff4c, type: 2}
-  questionsound: {fileID: 8300000, guid: 4712c41d78571524fb61abdb84114cf0, type: 3}
+  questionsound: {fileID: 8300000, guid: fc41ca949ca9dde4ca67d5d5f8866f98, type: 3}
   isTyping: 0
 --- !u!4 &378079415
 Transform:

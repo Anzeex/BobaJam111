@@ -26,7 +26,7 @@ public class NPC : MonoBehaviour
             Debug.LogError("player reference not set!");
         }
     }
-    public void OnApplicationPause(bool pause)
+    public void PuaseAniamtor()
     {
         gameObject.GetComponent<Animator>().enabled = false;
     }

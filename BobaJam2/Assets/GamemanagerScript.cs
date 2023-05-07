@@ -72,9 +72,10 @@ public class GamemanagerScript : MonoBehaviour
         {
             CrewAnimators[i].SetTrigger("intro");
         }
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < CrewAnimators.Length; i++)
         {
-           
+            print(i+"i");
             CrewAnimators[i].enabled = true;
             yield return new WaitForSeconds(7);
             print("animdoneforintro");

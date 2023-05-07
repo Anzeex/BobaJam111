@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GamemanagerScript Gamemanager;
-
+    
     private void Start()
     {
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
