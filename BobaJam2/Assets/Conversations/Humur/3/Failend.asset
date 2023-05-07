@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sentences:
   - Failure.
-  - Your a Disappointment.
+  - Your a disappointment.
   Speaekr: 0100000001000000
   speakerValue: 2
   ShouldConvoEnd: 1
