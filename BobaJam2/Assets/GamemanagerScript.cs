@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GamemanagerScript : MonoBehaviour
 {
@@ -28,8 +29,10 @@ public class GamemanagerScript : MonoBehaviour
     public AnimationClip[] respectiveclips;
     public TopDownController Playerplayer; 
     public GameObject names;
+    public GameObject[] childs;
     // Start is called before the first frame update
-
+    public Animator logo;
+   
     private static GamemanagerScript instance;
     [SerializeField] private string objectToFind;  // Name of the GameObject to find and activate
 
@@ -47,15 +50,29 @@ public class GamemanagerScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public List<GameObject> GetAllChildren(GameObject parent)
+    {
+        List<GameObject> children = new List<GameObject>();
 
+        // Loop through all the child objects of the parent object
+        foreach (Transform child in parent.transform)
+        {
+            // Add the current child object to the list of children
+            children.Add(child.gameObject);
+
+            // Recursively call the GetAllChildren function on the current child object
+            children.AddRange(GetAllChildren(child.gameObject));
+        }
+
+        return children;
+    }
     void Start()
     {
         Playerplayer.canwalk = false;
         SceneManager.sceneLoaded += OnSceneLoaded;
         thisscource = GetComponent<AudioSource>();
         StartCoroutine(introAnims());
-        panelToActivate = GameObject.Find(objectToFind);
-        panelToActivate.SetActive(false);
+        
 
     }
     public IEnumerator Soundsmusic()
@@ -69,6 +86,7 @@ public class GamemanagerScript : MonoBehaviour
     }
     public IEnumerator introAnims()
     {
+        logo.SetTrigger("intro");
         StartCoroutine(Soundsmusic());  
         for (int i = 0; i < CrewAnimators.Length; i++)
         {
@@ -190,26 +208,12 @@ public class GamemanagerScript : MonoBehaviour
                 break;
         }
     }
-
+   
     public void ExitConvo(){
         Debug.Log("ExitConvo called");
         SceneManager.LoadScene("AnzeeMovementScene", LoadSceneMode.Single);
         Debug.Log("ExitConvo completed");
-        panelToActivate = GameObject.Find(objectToFind);
-        panelToActivate.SetActive(false);
+      
     }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Tab))  // Check if the Tab key is being held down
-        {
-            if (panelToActivate != null && !panelToActivate.activeSelf)  // Check if the panel is not already active
-            {
-                panelToActivate.SetActive(true);  // Activate the panel
-            }
-        }
-        else if (panelToActivate != null && panelToActivate.activeSelf)  // Check if the panel is active
-        {
-            panelToActivate.SetActive(false);  // Deactivate the panel
-        }
-    }
+   
 }

@@ -4,7 +4,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GamemanagerScript Gamemanager;
-    
+    public TopDownController mmTroller;
+    public Animator Wincon;
+    public AudioSource so;
+    public AudioClip clip;
     private void Start()
     {
         Gamemanager = GameObject.FindObjectOfType<GamemanagerScript>();
@@ -31,6 +34,9 @@ public class Player : MonoBehaviour
     }
     public void Win() 
     {
-       //win
+        Wincon.SetTrigger("win");
+        mmTroller.canwalk = false;
+        so.clip= clip;
+        so.Play();
     }
 }

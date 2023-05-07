@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     public ConversationOBJ notReadySports;
     public ConversationOBJ notReadyHumor;
     public AudioClip questionsound;
-
+    public GameObject[] Marks;
     public bool isTyping;
     private bool conversationIsOver = false;
     public IEnumerator StartDialogue(ConversationOBJ conversationtoospeak)
@@ -148,6 +148,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     choicecardsText[0].GetComponent<Text>().text = "";
                     choicecards[0].SetActive(true);
+                    Marks[0].SetActive(true);
                 }
                 if (Gamemanager.gossipLevel == (Gamemanager.crushLevel + 1))
                 {
@@ -159,6 +160,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     choicecardsText[1].GetComponent<Text>().text = "";
                     choicecards[1].SetActive(true);
+                    Marks[1].SetActive(true);
                 }
                 if (Gamemanager.humorLevel == (Gamemanager.crushLevel + 1))
                 {
@@ -170,6 +172,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     choicecardsText[2].GetComponent<Text>().text = "";
                     choicecards[2].SetActive(true);
+                    Marks[2].SetActive(true);
                 }
             }
             else
@@ -191,6 +194,7 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             choicecards[i].SetActive(false);
+            Marks[i].SetActive(false);
         }
 
         //Currentconvo.ChoiceOptions[choice].effectt();
