@@ -1,5 +1,3 @@
-
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Convo", menuName = "ScriptableObjects/Conversation")]
