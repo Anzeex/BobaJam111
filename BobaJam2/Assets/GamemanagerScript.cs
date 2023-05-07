@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class GamemanagerScript : MonoBehaviour
 {
 
-
     public NPC.AbilityType abilityType = NPC.AbilityType.Empty;
     public int sportsLevel;
     public int gossipLevel;
     public int humorLevel;
     public int crushLevel;
     public int scenenum;
+    GameObject player;
     public ConversationOBJ[] Sports;
     public ConversationOBJ[] Gossip;
     public ConversationOBJ[] Humor;
