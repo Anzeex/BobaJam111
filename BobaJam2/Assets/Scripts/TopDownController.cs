@@ -8,7 +8,7 @@ public class TopDownController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
-
+    public bool canwalk = true;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,14 +18,19 @@ public class TopDownController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-
-        movement = new Vector2(horizontalInput, verticalInput).normalized;
-        rb.velocity = movement * moveSpeed;
-        if(rb.velocity.x < 0){
-            gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        if(canwalk)
+        {
+            movement = new Vector2(horizontalInput, verticalInput).normalized;
+            rb.velocity = movement * moveSpeed;
+            if (rb.velocity.x < 0)
+            {
+                gameObject.transform.localScale = new Vector3(1.5F, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
+            if (rb.velocity.x > 0)
+            {
+                gameObject.transform.localScale = new Vector3(-1.5F, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
         }
-        if(rb.velocity.x > 0){
-            gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-        }
+       
     }
 }

@@ -20,6 +20,11 @@ public class GamemanagerScript : MonoBehaviour
     public ConversationOBJ[] FailCovnos;
     public ConversationOBJ convoToParse;
     public DialogueManager Dsystem;
+    public AudioSource thisscource;
+    public AudioClip audioClip;
+    public Animator[] CrewAnimators;
+    public AnimationClip[] respectiveclips;
+    public TopDownController Playerplayer; 
     // Start is called before the first frame update
 
     private static GamemanagerScript instance;
@@ -39,11 +44,24 @@ public class GamemanagerScript : MonoBehaviour
 
     void Start()
     {
+        Playerplayer.canwalk = false;
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
-        
+        thisscource = GetComponent<AudioSource>();
+        StartCoroutine(introAnims());
+       
     }
+    public IEnumerator introAnims()
+    {
+       
+        for (int i = 0; i < CrewAnimators.Length; i++)
+        {
+            CrewAnimators[i].SetTrigger("intro");
+            print("animdoneforintro");
+        }
 
+        yield return new WaitForSeconds(5);
+        Playerplayer.canwalk = true;    
+    }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
