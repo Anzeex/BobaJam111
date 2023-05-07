@@ -13,6 +13,7 @@ public class GamemanagerScript : MonoBehaviour
     public int crushLevel;
     public int scenenum;
     GameObject player;
+    public TextFadeIn textFadeIn;
     public ConversationOBJ[] Sports;
     public ConversationOBJ[] Gossip;
     public ConversationOBJ[] Humor;
@@ -26,6 +27,7 @@ public class GamemanagerScript : MonoBehaviour
     public Animator[] CrewAnimators;
     public AnimationClip[] respectiveclips;
     public TopDownController Playerplayer; 
+    public GameObject names;
     // Start is called before the first frame update
 
     private static GamemanagerScript instance;
@@ -81,7 +83,9 @@ public class GamemanagerScript : MonoBehaviour
             print("animdoneforintro");
         }
         yield return new WaitForSeconds(5);
-        Playerplayer.canwalk = true;    
+        Debug.Log("textfadeincall");
+        StartCoroutine(textFadeIn.FadeInText(2f));
+        Playerplayer.canwalk = true;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -186,6 +190,7 @@ public class GamemanagerScript : MonoBehaviour
                 break;
         }
     }
+
     public void ExitConvo(){
         Debug.Log("ExitConvo called");
         SceneManager.LoadScene("AnzeeMovementScene", LoadSceneMode.Single);
