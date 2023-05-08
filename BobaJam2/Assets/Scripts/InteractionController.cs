@@ -6,6 +6,7 @@ public class InteractionController : MonoBehaviour
     public LayerMask npcLayer;
     private Player player;
     public GamemanagerScript Gamemanager;
+    public GameObject pressEText;
 
     void Start()
     {
@@ -18,6 +19,13 @@ public class InteractionController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             InteractWithNPC();
+        }
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, interactionDistance, npcLayer);
+
+        if (hit.collider != null)
+        {pressEText.SetActive(true);}
+        else{
+            pressEText.SetActive(false);
         }
     }
 
